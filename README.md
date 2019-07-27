@@ -93,11 +93,21 @@ discussion:
   moderate this discussion and remove or move off-topic posts to keep the
   discussion focused on the above questions.
 
-## References
+# References
 
-[1] https://github.com/status-im/nim-chronos
-[2] https://github.com/nim-lang/Nim/issues/8080
-[3] https://forum.nim-lang.org/t/5048
-[4] https://github.com/nim-lang/Nim/issues/3590
-[5] https://github.com/nim-lang/Nim/issues/4123
-[6] https://github.com/nim-lang/Nim/issues/7126
+Chronos repo:
+
+- [1] https://github.com/status-im/nim-chronos
+
+Recent forum discussion:
+
+- [3] https://forum.nim-lang.org/t/5048
+
+"important" nim stdlib issues:
+
+- [2] https://github.com/nim-lang/Nim/issues/8080
+- [4] https://github.com/nim-lang/Nim/issues/3590
+- [5] https://github.com/nim-lang/Nim/issues/4123
+- [6] https://github.com/nim-lang/Nim/issues/7126
+
+
