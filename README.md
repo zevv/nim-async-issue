@@ -18,7 +18,8 @@ Here is the back story:
 - The Nim stdlib comes with a library for doing async (network) I/O, consisting
   of asyncmacro, asyncdispatch, asyncnet and ioselectors. This has been part of
   the standard library for a few years, and is the base layer on which things
-  like asyncHttp are built. A well-known application using stdlib async is the Nim forum itself.
+  like asyncHttp are built. A well-known application using stdlib async is the
+  Nim forum itself.
 
 - Implementing async I/O is not trivial, and the Nim libraries has had some
   bugs, missing features or other issues. Some were fixed and addressed in the
@@ -26,14 +27,19 @@ Here is the back story:
   others: some are considered blockers[2][6] for a 1.0 Nim release.
 
 - A bit over a year ago a third-party implementation of async I/O called
-  `Chronos`[1] was created by people who had specific demands on the I/O layer
-  that the Nim std lib could at time not fill. Chronos was originally a fork
-  from Nim async library, but has undergone some breaking API changes.  Chronos
-  has seen steady development over the last year, diverging more and more from
-  Nim async, but also fixing some of the issues that were in the Nim standard
-  library. Chronos is developed at Status, the main Nim sponsor, as a core
-  component of Nimbus, a client for the Ethereum blockchain and nim-libp2p, a
-  standard for P2P protocol.
+  `Chronos`[1] was created by people who were not content with the quality
+  and stability of the async layer at that time and found that these issues
+  were not timely addressed by the Nim maintainers. [7][8][10][11][12]
+
+- Chronos was partially forked from the Nim async library, while other parts
+  were rewritten from scratch. Chronos's API is not compatible with Nims async
+  lib, as API changes were deemed necessery to fix underlying issues.
+  
+- Chronos has seen steady development over the last year, diverging more and
+  more from Nim async, but also fixing some of the issues that were in the Nim
+  standard library. Chronos is developed at Status, the main Nim sponsor, as a
+  core component of Nimbus, a client for the Ethereum blockchain and
+  nim-libp2p, a standard for P2P protocol.
 
 # The problem
 
@@ -102,11 +108,20 @@ Recent forum discussion:
 
 - [3] https://forum.nim-lang.org/t/5048
 
-"important" nim stdlib issues:
+"important" open nim stdlib issues:
 
 - [2] https://github.com/nim-lang/Nim/issues/8080
 - [4] https://github.com/nim-lang/Nim/issues/3590
 - [5] https://github.com/nim-lang/Nim/issues/4123
 - [6] https://github.com/nim-lang/Nim/issues/7126
+- [9] https://github.com/nim-lang/Nim/issues/7193
+
+older and closed stdlib issues.
+
+- [7] https://github.com/nim-lang/Nim/issues/7758
+- [8] https://github.com/nim-lang/Nim/issues/7197
+- [10] https://github.com/nim-lang/Nim/issues/7192
+- [11] https://github.com/nim-lang/Nim/issues/6846
+- [12] https://github.com/nim-lang/Nim/issues/6929
 
 
