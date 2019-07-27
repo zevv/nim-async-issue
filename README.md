@@ -7,7 +7,7 @@ resolution for this situation that makes everybody happy and foster the Nim ecos
 
 # Background
 
-Over the last few weeks/months I have seen a number of discussions on the Nim
+Over the last few weeks/months I have seen a number of discussions[3] on the Nim
 forum and the #nim IRC channel about the state of the Nim async library. After
 speaking with some (but not all!) of the people involved I figured it is time
 to make this into an official discussion to see how this can be resolved and we
@@ -21,13 +21,12 @@ Here is the back story:
   like asyncHttp are built. A well-known application using stdlib async is the Nim forum itself.
 
 - Implementing async I/O is not trivial, and the Nim libraries has had some
-  bugs, missing features or other issues (references). Some were fixed and
-  addressed in the past, but some are still open (references). Also, some
-  issues are more serious then others: some are considered blockers for a 1.0
-  Nim release (reference).
+  bugs, missing features or other issues. Some were fixed and addressed in the
+  past, but some are still open [4][5]. Also, some issues are more serious then
+  others: some are considered blockers[2][6] for a 1.0 Nim release.
 
 - A bit over a year ago a third-party implementation of async I/O called
-  `Chronos` (reference) was created by people who had specific demands on the
+  `Chronos`[1] was created by people who had specific demands on the
   I/O layer that the Nim std lib could at time not fill. Chronos was originally
   a fork from nim async library, but has undergone some breaking API changes.
   Chronos has seen steady development over the last year, diverging more and
@@ -96,4 +95,9 @@ discussion:
 
 ## References
 
-References go here.
+[1] https://github.com/status-im/nim-chronos
+[2] https://github.com/nim-lang/Nim/issues/8080
+[3] https://forum.nim-lang.org/t/5048
+[4] https://github.com/nim-lang/Nim/issues/3590
+[5] https://github.com/nim-lang/Nim/issues/4123
+[6] https://github.com/nim-lang/Nim/issues/7126
