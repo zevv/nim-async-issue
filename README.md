@@ -3,7 +3,7 @@
 There are two incompatible async I/O libraries available for Nim, which is not
 a good thing given the fundamental layer at which these libraries operate. The
 risk is that this might split the library ecosystem. I hope to find a
-resolution for this situation that makes everybody happy.
+resolution for this situation that makes everybody happy and foster the Nim ecosystem.
 
 # Background
 
@@ -18,7 +18,7 @@ Here is the back story:
 - The Nim stdlib comes with a library for doing async (network) I/O, consisting
   of asyncmacro, asyncdispatch, asyncnet and ioselectors. This has been part of
   the standard library for a few years, and is the base layer on which things
-  like asyncHttp are built.
+  like asyncHttp are built. A well-known application using stdlib async is the Nim forum itself.
 
 - Implementing async I/O is not trivial, and the Nim libraries has had some
   bugs, missing features or other issues (references). Some were fixed and
@@ -26,13 +26,16 @@ Here is the back story:
   issues are more serious then others: some are considered blockers for a 1.0
   Nim release (reference).
 
-- A bit over a year a go a third-party implementation of async I/O called
+- A bit over a year ago a third-party implementation of async I/O called
   `Chronos` (reference) was created by people who had specific demands on the
   I/O layer that the Nim std lib could at time not fill. Chronos was originally
   a fork from nim async library, but has undergone some breaking API changes.
   Chronos has seen steady development over the last year, diverging more and
   more from Nim async, but also fixing some of the issues that were in the Nim
-  standard library.
+  standard library. Chronos is developed at Status, the main Nim sponsor,
+  as a core component of Nimbus,
+  a client for the Ethereum blockchain and nim-libp2p, a standard for
+  P2P protocol.
 
 # The problem
 
@@ -58,6 +61,7 @@ we can figure out the right thing to do. Some questions?
 - Do we accept the status quo? There are two available implementations, and
   users should be free to choose?
 - Should the Nim stdlib drop the current implementation in favour of chronos?
+  If so, when? What about Nim 1.0?
 - Should we put work into getting the two implementations to cooperate?
 - Can we add a Chronos-compatibity layer on top of the nim libs, or add a
   nim-compatibility layer on top of Chronos?
@@ -65,7 +69,7 @@ we can figure out the right thing to do. Some questions?
 Here are the important points that I think should be addressed in this
 discussion:
 
-- API stablity: The nim Async layer tries to provide a stable API on which
+- API stability: The nim Async layer tries to provide a stable API on which
   other protocols have been implemented. Chronos has had good reasons to make
   changes, but this broke compatibility with existing and future Nim-async
   libraries.
