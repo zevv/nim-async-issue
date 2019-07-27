@@ -108,7 +108,7 @@ Recent forum discussion:
 
 - [3] https://forum.nim-lang.org/t/5048
 
-"important" open nim stdlib issues:
+Relevant open nim stdlib issues:
 
 - [2] https://github.com/nim-lang/Nim/issues/8080
 - [4] https://github.com/nim-lang/Nim/issues/3590
@@ -116,12 +116,12 @@ Recent forum discussion:
 - [6] https://github.com/nim-lang/Nim/issues/7126
 - [9] https://github.com/nim-lang/Nim/issues/7193
 
-older and closed stdlib issues.
+Closed Nim stdlib issues (inc days-to-fix)
 
-- [7] https://github.com/nim-lang/Nim/issues/7758
-- [8] https://github.com/nim-lang/Nim/issues/7197
-- [10] https://github.com/nim-lang/Nim/issues/7192
-- [11] https://github.com/nim-lang/Nim/issues/6846
-- [12] https://github.com/nim-lang/Nim/issues/6929
+- [7] https://github.com/nim-lang/Nim/issues/7758 (113)
+- [8] https://github.com/nim-lang/Nim/issues/7197 (273)
+- [10] https://github.com/nim-lang/Nim/issues/7192 (281)
+- [11] https://github.com/nim-lang/Nim/issues/6846 (266)
+- [12] https://github.com/nim-lang/Nim/issues/6929 (252)
 
 
